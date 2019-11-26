@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css?family=Alatsi|Roboto|Lato&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.card__front {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 18px;
+  color: white;
+  overflow: hidden;
+}
+
+.card__front__bg {
+  background-image: url("https://poketouch.files.wordpress.com/2019/02/pokemon_sword_and_shield_galar_open_world_view_screenshot.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0%;
+}
+
+.card__front__hop {
+  background-image: url("https://cdn.bulbagarden.net/upload/thumb/2/20/Sword_Shield_Hop.png/170px-Sword_Shield_Hop.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: scale(1.8);
+          transform: scale(1.8);
+}
+
+.card__front__logo {
+  background-image: url("../images/gymlogo.png");
+  background-repeat: no-repeat;
+  background-size: 100px 100px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  right: 0%;
+}
+
+.card__front__bottomBG1 {
+  -webkit-clip-path: polygon(56% 85%, 100% 76%, 100% 100%, 0 100%, 0 94%);
+          clip-path: polygon(56% 85%, 100% 76%, 100% 100%, 0 100%, 0 94%);
+  background: #0074db;
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  bottom: 0px;
+}
+
+.card__front__bottomBG2 {
+  -webkit-clip-path: polygon(56% 85%, 100% 76%, 100% 100%, 0 100%, 0 94%);
+          clip-path: polygon(56% 85%, 100% 76%, 100% 100%, 0 100%, 0 94%);
+  background: -webkit-gradient(linear, left top, right top, from(#292929), to(#3d3a8b));
+  background: linear-gradient(to right, #292929 0%, #3d3a8b 100%);
+  opacity: 80%;
+  width: 100%;
+  height: 400px;
+  position: absolute;
+  bottom: 0px;
+}
+
+.card__front__number {
+  font-size: 82px;
+  font-weight: 800;
+  position: absolute;
+  bottom: 0px;
+  left: 20px;
+  text-shadow: 8px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.card__front__name {
+  font-size: 32px;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
+.card__back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  border-radius: 18px;
+  background: #343334;
+  color: white;
+  overflow: hidden;
+}
+
+.card__back__bg {
+  width: 86%;
+  height: 100%;
+  background: #0a8bbc;
+  position: absolute;
+  right: 0;
+}
+
+.card__back__top-shape {
+  -webkit-clip-path: polygon(21% 0, 0 0, 0 48%);
+          clip-path: polygon(21% 0, 0 0, 0 48%);
+  background: #0269a0;
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  top: 0;
+  left: 14%;
+}
+
+.card__back__bottom-shape {
+  -webkit-clip-path: polygon(100% 55%, 74% 100%, 100% 100%);
+          clip-path: polygon(100% 55%, 74% 100%, 100% 100%);
+  background: #0269a0;
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  bottom: 0px;
+}
+
+.card__back__flavor-text {
+  margin: 20px;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 20%;
+  left: 12%;
+  width: 80%;
+  height: 100%;
+}
+
+.card__back__number {
+  font-size: 82px;
+  font-weight: 800;
+  position: absolute;
+  bottom: 0px;
+  left: 20px;
+}
+
+.card__back__name {
+  font-size: 32px;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #e7e7eb;
+  height: 100vh;
+}
+
+.card-container {
+  width: 400px;
+  height: 550px;
+  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+.card-container:hover .card {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+  background: transparent;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 18px;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+/*# sourceMappingURL=main.css.map */

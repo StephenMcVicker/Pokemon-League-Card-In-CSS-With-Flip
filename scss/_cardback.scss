@@ -1,0 +1,82 @@
+.card__back {
+
+
+  $bg-color: #0a8bbc;
+  $bg-shape-color: #0269a0;
+  $sidebar-color: #343334;
+  @include fillParentElSize ();
+
+  //backface-visibility: hidden;
+  transform: rotateY(180deg);
+
+  border-radius: $card-border-radius;
+
+  background: $sidebar-color;
+  color: $card-text-color;
+  overflow: hidden; // will clip children
+
+  &__bg {
+    width: 86%;
+    height: 100%;
+    background: $bg-color;
+    position: absolute;
+    right: 0;
+
+  }
+
+  // background shapes
+  &__top-shape {
+
+    clip-path: polygon(21% 0, 0 0, 0 48%);
+    background: $bg-shape-color;
+    width: 100%;
+    height: 500px;
+
+    position: absolute;
+    top: 0;
+    left: 14%;
+  }
+
+  &__bottom-shape {
+
+    clip-path: polygon(100% 55%, 74% 100%, 100% 100%);
+    background: $bg-shape-color;
+    width: 100%;
+    height: 500px;
+
+    position: absolute;
+    bottom: 0px;
+  }
+
+  &__flavor-text {
+
+    margin: 20px;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
+    position: absolute;
+
+    top: 20%;
+    left: 12%;
+    width: 80%;
+    height: 100%;
+  }
+
+  &__number {
+    font-size: 82px;
+    font-weight: $card-number-weight;
+    position: absolute;
+    bottom: 0px;
+    left: 20px;
+  }
+
+  &__name {
+    font-size: 32px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+  }
+
+}
