@@ -1,0 +1,97 @@
+.card__front {
+
+  @include fillParentElSize ();
+  //backface-visibility: hidden;
+
+  border-radius: $card-border-radius;
+
+  color: $card-text-color;
+  overflow: hidden; // will clip children
+
+  &__bg {
+
+    // Random town screenshot
+    background-image: url('https://poketouch.files.wordpress.com/2019/02/pokemon_sword_and_shield_galar_open_world_view_screenshot.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    right: 0%;
+  }
+
+  // The character
+  &__hop {
+    // Image of Hop
+    background-image: url('https://cdn.bulbagarden.net/upload/thumb/2/20/Sword_Shield_Hop.png/170px-Sword_Shield_Hop.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%; //40%;
+
+    transform: scale(1.8);
+
+  }
+
+  // Logo in the top right - using local image
+  &__logo {
+
+    $logo-size: 100px;
+    background-image: url('../images/gymlogo.png');
+    background-repeat: no-repeat;
+    background-size: $logo-size $logo-size;
+    width: $logo-size;
+    height: $logo-size;
+    position: absolute;
+    top: 0;
+    right: 0%;
+  }
+
+  // bottom shapes
+  &__bottomBG1 {
+
+    clip-path: polygon(56% 85%, 100% 76%, 100% 100%, 0 100%, 0 94%);
+    background: #0074db;
+    width: 100%;
+    height: 500px;
+
+    position: absolute;
+    bottom: 0px;
+  }
+
+  &__bottomBG2 {
+
+    clip-path: polygon(56% 85%, 100% 76%, 100% 100%, 0 100%, 0 94%);
+    background: linear-gradient(to right, rgba(41, 41, 41, 1) 0%, rgba(61, 58, 139, 1) 100%);
+    opacity: 80%;
+    width: 100%;
+    height: 400px;
+
+    position: absolute;
+    bottom: 0px;
+  }
+
+
+  // Text on bottom
+  &__number {
+    font-size: 82px;
+    font-weight: $card-number-weight;
+    position: absolute;
+    bottom: 0px;
+    left: 20px;
+    text-shadow: 8px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  &__name {
+    font-size: 32px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+  }
+
+}

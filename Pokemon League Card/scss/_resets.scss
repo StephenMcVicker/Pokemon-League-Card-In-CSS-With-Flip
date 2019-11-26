@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// mixins should define styles
+@mixin flexCenter ($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin fillParentElSize () {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+
+// Responsive site
+
+@mixin media-xl {
+  @media screen and (min-width:1600px) {
+    @content;
+  }
+}
+
+@mixin media-lg {
+  @media screen and (min-width:1024px) {
+    @content;
+  }
+}
+
+@mixin media-md {
+  @media screen and (min-width:0px) {
+    @content;
+  }
+}
